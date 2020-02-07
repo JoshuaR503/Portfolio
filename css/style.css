@@ -853,6 +853,13 @@ Blog page
 	padding: 55px 58px;
 	margin-top: -133px;
 	margin-left: 62px;
+
+}
+
+.blog-content p {
+
+	line-height: 2.0;
+	font-size: 15px;
 }
 
 .blog-content h2 a {
@@ -960,7 +967,7 @@ Portfolio page
 }
 
 .portfolio-item img {
-	min-width: 100%;
+	min-width: 98%;
 }
 
 .portfolio-item .pi-info {
@@ -1048,7 +1055,14 @@ Contact page
 Responsive
  ---------------------*/
 
+ @media screen and (min-width: 1804px) {
+    .portfolio-item img {
+		min-width: 60%;
+	}
+}
+
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+	
 	.main-sidebar,
 	.copyright {
 		width: 450px;
@@ -1135,7 +1149,7 @@ Responsive
 		margin-bottom: 50px;
 	}
 	.site-logo h2 {
-		font-size: 70px;
+		font-size: 50px;
 		line-height: 70px;
 	}
 	.site-logo p {
@@ -1168,7 +1182,7 @@ Responsive
 		height: auto;
 	}
 	.main-sidebar .mb-warp {
-		padding: 100px 15px;
+		padding: 15px 15px;
 		max-width: 420px;
 		margin: 0 auto;
 	}
