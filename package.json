@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "0.0.1",
+  "description": "This is a dummy portfolio",
+  "main": "app.ts",
+  "scripts": {
+    "serve": "nodemon app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaR503/Portfolio.git"
+  },
+  "author": "Joshua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshuaR503/Portfolio/issues"
+  },
+  "homepage": "https://github.com/JoshuaR503/Portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "handlebars": "^4.7.3",
+    "path": "^0.12.7",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "ts-node": "^8.6.2"
+  }
+}
