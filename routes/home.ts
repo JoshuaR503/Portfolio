@@ -2,11 +2,12 @@
 
 
 import { Router} from 'express';
-import { renderHomeScreen } from '../controllers/home/home.controller';
+import { renderHomeScreen, renderAboutScreen } from '../controllers/home/home.controller';
 
 const homeRouter: Router = Router();
 
 homeRouter.get('/', renderHomeScreen);
+homeRouter.get('/about', renderAboutScreen);
 
 export default homeRouter;
 

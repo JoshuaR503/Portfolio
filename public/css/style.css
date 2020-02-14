@@ -85,6 +85,14 @@ ol {
 /*---------------------
 Helper CSS
  -----------------------*/
+.box-item {
+	color: #2c75e9;
+}
+
+.box-item:hover,
+.box-item:focus {
+	color: #1d67dd;
+}
 
 .section-title {
 	text-align: center;
@@ -617,9 +625,16 @@ body.push-side #ascrail2000-hr {
 	margin-bottom: 40px;
 }
 
-.site-logo h2 {
+.site-logo-small h2 {
 	line-height: 1.5;
 	font-size: 55px;
+	font-weight: bold;
+	font-weight: 400;
+}
+
+.site-logo h2 {
+	line-height: 1.5;
+	font-size: 60px;
 	font-weight: bold;
 	font-weight: 400;
 }

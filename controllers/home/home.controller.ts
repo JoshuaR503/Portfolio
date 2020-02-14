@@ -1,16 +1,15 @@
 import { Request, Response } from 'express';
 
-/**
- * Searches all collections.
- * @param request 
- * @param response 
- */
-const renderHomeScreen = (request: Request, response: Response) => {
 
+const renderHomeScreen = (_: Request, response: Response) => {
     response.render('home/home');
+}
 
+const renderAboutScreen = (_: Request, response: Response) => {
+    response.render('home/about');
 }
 
 export {
+    renderAboutScreen,
     renderHomeScreen
 }
