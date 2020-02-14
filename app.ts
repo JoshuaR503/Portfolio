@@ -1,5 +1,8 @@
 import express, { Application, Request, Response, NextFunction  } from 'express';
+import exphbs from 'express-handlebars';
 import path from 'path';
+import homeRouter from './routes/home';
+import blogRouter from './routes/blogs';
 
 class Server {
     private app: Application;
@@ -15,18 +18,17 @@ class Server {
 
     private setConfig(): void {
         this.app.set('view engine', 'hbs');
-        this.app.set('views', path.join(__dirname, '../../src/server/views'));
+        this.app.set('views', path.join(__dirname, './views'));
         this.app.engine('hbs', exphbs({
-            defaultLayout: 'index',
+            defaultLayout: 'main',
             extname: 'hbs',
-            layoutsDir: path.join(__dirname, '../../src/server/views/layouts'),
-            partialsDir: path.join(__dirname, '../../src/server/views'),
         }));
 
-        this.app.use((request: Request, response: Response, next: NextFunction) => {
+        this.app.use(express.static(path.join(__dirname, 'public')));
+        this.app.use((_: Request, response: Response, next: NextFunction) => {
             response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
             response.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-            response.header('Content-Security-Policy', "default-src 'self'");
+            // response.header('Content-Security-Policy', "default-src 'self'");
             next();
         });
 
@@ -35,7 +37,10 @@ class Server {
     }
 
 
-    private setRouter(): void {}
+    private setRouter(): void {
+        this.app.use('/', homeRouter);
+        this.app.use('/showcase', blogRouter);
+    }
 
     private run(): void { 
         this.app.listen(this.port, () => {
@@ -45,3 +50,4 @@ class Server {
     }
 }
 
+new Server();
