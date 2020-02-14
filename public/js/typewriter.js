@@ -11,6 +11,6 @@ typewriter
 .typeString('Ready to <br>learn new<br>languages and<br>technologies.')
 .pauseFor(3000)
 .deleteAll()
-.typeString("I'm Joshua, nice to meet you.")
+.typeString("I'm Joshua,<br>nice to meet you.")
 .stop()
 .start();
