@@ -4,6 +4,8 @@
   "description": "This is a dummy portfolio",
   "main": "app.ts",
   "scripts": {
+    "start": "node dist/app.js",
+    "build": "tsc -p .",
     "serve": "nodemon app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
