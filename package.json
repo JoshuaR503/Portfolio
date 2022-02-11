@@ -21,7 +21,7 @@
   "homepage": "https://github.com/JoshuaR503/Portfolio#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
+    "express-handlebars": "^5.3.1",
     "handlebars": "^4.7.3",
     "path": "^0.12.7",
     "typescript": "^3.7.5"
